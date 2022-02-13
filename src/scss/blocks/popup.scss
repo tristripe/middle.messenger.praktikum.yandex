@@ -1,0 +1,20 @@
+.popup {
+  position: relative;
+  width: 405px;
+  background-color: $black;
+  border-radius: 20px;
+  margin: auto;
+  padding: 40px;
+}
+
+.popup__close {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}

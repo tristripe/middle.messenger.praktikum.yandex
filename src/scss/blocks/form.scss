@@ -1,0 +1,159 @@
+.form__title {
+  font-size: 12px;
+  line-height: 1;
+  color: $white;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form__input {
+  width: 325px;
+  height: 40px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: $deepBlack;
+  padding-left: 9px;
+  color: $white;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+.form__label {
+  margin-bottom: 16px;
+  display: block;
+  margin-right: 40px;
+}
+
+.form__link {
+  font-size: 12px;
+  line-height: 1;
+  color: $blue;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.form__submit-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.form__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: $blue;
+  color: $white;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  width: 100%;
+  height: 42px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form__register-tip {
+  margin: 0 0 7px;
+  font-size: 12px;
+  line-height: 1;
+  color: $gray;
+}
+
+.form__avatar {
+  display: none;
+}
+
+.form__avatar-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 130px;
+  margin-right: 20px;
+}
+
+.form__settings {
+  display: flex;
+}
+
+.form__section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__label-avatar {
+  margin: 0;
+  background-color: white;
+  padding: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.form__settings-title {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: $white;
+  width: 100%;
+  margin-bottom: 29px;
+}
+
+.form__button-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form__change-password {
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 17px;
+  background-color: $blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button {
+  font-size: 14px;
+  border: none;
+  white-space: nowrap;
+  color: $white;
+  padding: 0 20px;
+  height: 42px;
+  border-radius: 4px;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--cancel {
+    background-color: $deepBlack;
+  }
+
+  &--confirm {
+    background-color: $blue;
+  }
+}
