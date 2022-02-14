@@ -7,3 +7,4 @@
 
 [Ссылка на деплой в netlify, c ветки deploy](https://6208b7d56e76092ccf58351f--compassionate-jang-83aa11.netlify.app/)
 [Ссылка на прототип в фигме](https://www.figma.com/file/PrG8yxnDaAUwBsAx2G0H0i/yandex-chat)
+[Ссылка на пуллреквест из sprint_1 в main](https://github.com/tristripe/middle.messenger.praktikum.yandex/pull/2
