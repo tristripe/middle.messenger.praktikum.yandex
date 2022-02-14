@@ -1,0 +1,34 @@
+.error {
+  background-color: $black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error__wrapper {
+  text-align: center;
+}
+
+.error__title {
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: $white;
+}
+
+.error__text {
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: $white;
+}
+
+.error__link {
+  font-size: 12px;
+  line-height: 1;
+  color: $blue;
+  text-decoration: none;
+}

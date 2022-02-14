@@ -1,0 +1,30 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel ./src/pages/*.hbs -p 3000",
+    "build": "parcel build ./src/pages/*.hbs",
+    "scss-watch": "sass --no-source-map --watch ./src/scss/main.scss public/styles/main.css",
+    "express": "node app.js",
+    "static": "npm-run-all --parallel node express scss-watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "express-compile-sass": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.3.0"
+  },
+  "dependencies": {
+    "@parcel/config-default": "^2.3.1",
+    "@parcel/transformer-sass": "^2.3.1",
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.7"
+  }
+}

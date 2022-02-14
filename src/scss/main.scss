@@ -1,0 +1,82 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/normalize";
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.outer-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-outer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &--active {
+    display: flex;
+  }
+}
+
+.links-wrapper {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+@import "blocks/login";
+@import "blocks/form";
+@import "blocks/frame";
+@import "blocks/popup";
+@import "blocks/error";
