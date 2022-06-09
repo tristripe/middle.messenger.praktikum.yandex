@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel ./src/pages/*.hbs -p 3000",
+    "start": "parcel ./src/pages/*.hbs -p 3000 --no-cache",
     "build": "parcel build ./src/pages/*.hbs",
     "scss-watch": "sass --no-source-map --watch ./src/scss/main.scss public/styles/main.css",
     "express": "node app.js",
@@ -14,17 +14,22 @@
   "license": "ISC",
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "express-compile-sass": "^4.0.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.3.0"
+    "parcel": "^2.3.0",
+    "stylelint": "^14.5.3"
   },
   "dependencies": {
     "@parcel/config-default": "^2.3.1",
     "@parcel/transformer-sass": "^2.3.1",
     "express": "^4.17.2",
+    "express-compile-sass": "^4.0.0",
     "hbs": "^4.2.0",
     "node-sass": "^7.0.1",
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-scss": "^4.1.0"
   }
 }

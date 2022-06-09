@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "color-hex-case": "lower",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": false,
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true
+  },
+  "ignoreFiles": [
+    "dist/*",
+    "src/components/*.hbs",
+    "src/pages/*.hbs",
+    "src/fonts/*/**",
+    "src/modules/*.**",
+    "./src/images/*.**",
+    "*.json",
+    "*.md",
+    "*.ts",
+    "*.js"
+  ]
+}
