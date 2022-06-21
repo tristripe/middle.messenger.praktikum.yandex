@@ -242,4 +242,5 @@ export default class Block<P = any> {
   hide() {
     this.getContent().style.display = 'none';
   }
+
 }

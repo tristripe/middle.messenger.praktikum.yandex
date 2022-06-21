@@ -14,11 +14,11 @@ import IndexPage from "./pages/indexPage";
 import Page500 from "./pages/500";
 import Input from "./components/Input";
 
-registerComponent(Avatar);
-registerComponent(Input);
-registerComponent(Button);
-registerComponent(ErrorComponent);
-registerComponent(ControlledInput);
+registerComponent(Input, "Input");
+registerComponent(Button, "Button");
+registerComponent(Avatar, "Avatar");
+registerComponent(ErrorComponent, "Error");
+registerComponent(ControlledInput, "ControlledInput");
 
 document.addEventListener("DOMContentLoaded", () => {
   const path = document.location.pathname;

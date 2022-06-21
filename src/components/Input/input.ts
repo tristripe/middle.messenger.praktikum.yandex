@@ -22,27 +22,21 @@ export interface InputProps {
 export class Input extends Block {
   constructor({
                 type = 'text',
-                text,
                 className,
                 placeholder,
-                search,
-                labelClass,
-                formTitle,
                 name,
-                forgotText,
-                forgotLink,
                 value,
                 onInput,
                 onFocus,
                 onBlur,
               }: InputProps) {
     super({
-      type, text, className, placeholder, search, labelClass, formTitle, name, forgotText, forgotLink, value,
+      type, className, placeholder, name, value,
       events: {
         blur: onBlur,
         focus: onFocus,
         input: onInput
-      }
+      },
     });
   }
 
