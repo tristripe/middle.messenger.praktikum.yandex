@@ -1,5 +1,4 @@
-@import 'mixins';
-
+@import "mixins";
 @include font-face("Open Sans", "../../src/fonts/open-sans/OpenSans-Regular");
 @include font-face("Open Sans", "../../src/fonts/open-sans/OpenSans-Light", 300);
 @include font-face("Open Sans", "../../src/fonts/open-sans/OpenSans-SemiBold", 600);

@@ -1,0 +1,40 @@
+.friends__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid $deep-black;
+  width: 100%;
+}
+
+.friends__main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.friends__search {
+  padding: 40px 17px 20px 40px;
+  width: 249px;
+  background-color: rgb(159 159 159 / 10%);
+}
+
+.friends__tools-panel {
+  padding: 47px 0 0 23px;
+}
+
+.friends__side-menu {
+  min-width: 249px;
+  background-color: rgb(159 159 159 / 10%);
+}
+
+.friends__status {
+  background-color: $deep-black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 9px 49px 9px 40px;
+}
+
+.friends__settings {
+  margin-left: 50px;
+}

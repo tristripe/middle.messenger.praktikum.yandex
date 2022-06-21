@@ -6,28 +6,14 @@
   display: block;
 }
 
-.form__input {
-  width: 325px;
-  height: 40px;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  background-color: $deepBlack;
-  padding-left: 9px;
-  color: $white;
-  font-size: 16px;
-  line-height: 1;
-  margin-bottom: 7px;
-}
-
 .form__label {
   margin-bottom: 16px;
   display: block;
-  margin-right: 40px;
 }
 
 .form__link {
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.5;
   color: $blue;
   text-decoration: none;
   display: inline-block;
@@ -60,7 +46,7 @@
 .form__register-tip {
   margin: 0 0 7px;
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.5;
   color: $gray;
 }
 
@@ -82,7 +68,10 @@
 
 .form__section {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .form__label-avatar {
@@ -91,6 +80,8 @@
   padding: 15px;
   border-radius: 50%;
   overflow: hidden;
+  width: 130px;
+  height: 130px;
 
   picture {
     display: flex;
@@ -150,10 +141,21 @@
   }
 
   &--cancel {
-    background-color: $deepBlack;
+    background-color: $deep-black;
   }
 
   &--confirm {
     background-color: $blue;
   }
+}
+
+.form__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 40px;
+}
+
+.form__input {
+  width: 325px;
 }

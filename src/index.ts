@@ -1,19 +1,71 @@
-import {popup} from './modules/popup';
-import {eventbus} from "./modules/eventbus";
+import {registerComponent, renderDOM} from './core';
+import './scss/main.scss'
+import Avatar from "./components/Avatar";
+import Button from "./components/Button";
+import ErrorComponent from "./components/Error";
+import ControlledInput from "./components/ControlledInput";
+import Input from "./components/Input";
+import Friends from "./pages/friends";
+import Chat from "./pages/chat";
+import Settings from "./pages/settings";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import Page404 from "./pages/404";
+import IndexPage from "./pages/indexPage";
+import Page500 from "./pages/500";
+import {TestLogin} from "./pages/testLogin/testlogin";
 
-popup();
-eventbus();
+registerComponent(Avatar);
+registerComponent(Button);
+registerComponent(ErrorComponent);
+registerComponent(ControlledInput);
+registerComponent(Input);
 
-const eventBus = new EventBus();
+document.addEventListener("DOMContentLoaded", () => {
+  const path = document.location.pathname;
+  let app = {};
 
-const callback = () => {
-  console.count('Event emitted');
-}
+  switch (path) {
+    case '/login.html':
+      app = new Login({});
+      break;
+    case '/register.html':
+      app = new Register({});
+      break;
+    case '/settings.html':
+      app = new Settings({});
+      break;
+    case '/chat.html':
+      app = new Chat({
+        avatars: [
+          {previewMessage: "Привет", name: "Иван"},
+          {previewMessage: "Доброго дня", name: "Михаил"},
+          {previewMessage: "Жду отчет", name: "Пётр Петрович"},
+          {previewMessage: "Как ты", name: "София"},
+          {previewMessage: "Хелоу", name: "Дадул"},
+        ]
+      });
+      break;
+    case '/friends.html':
+      app = new Friends({
+        avatars: [
+          {previewMessage: "Привет", name: "Иван"},
+          {previewMessage: "Доброго дня", name: "Михаил"},
+          {previewMessage: "Жду отчет", name: "Пётр Петрович"},
+          {previewMessage: "Как ты", name: "София"},
+          {previewMessage: "Хелоу", name: "Дадул"},
+        ]
+      });
+      break;
+    case '/404.html':
+      app = new Page404({});
+      break;
+    case '/500.html':
+      app = new Page500({});
+      break;
+    default:
+      app = new IndexPage({});
+  }
 
-eventBus.on('myEvent', callback);
-eventBus.on('myEvent', callback);
-eventBus.on('myEvent', callback);
-
-eventBus.emit('myEvent'); // обработчик будет вызван 3 раза
-
-eventBus.off('myEvent', callback); // удалятся все три копии обработчика
+  renderDOM(app);
+});

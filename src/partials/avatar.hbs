@@ -1,0 +1,26 @@
+<article class="avatar {{class}}">
+  {{#if avatarClose}}
+    <button class="avatar__close">
+      <img src="../images/cross.svg" alt="Закрыть чат"/>
+    </button>
+  {{/if}}
+  <div class="avatar__image">
+    {{#if avatarImage}}
+      <img src="{{avatarImage}}" alt="Изображение">
+    {{else}}
+      <img src="../images/avatar.jpg" alt="Изображение">
+    {{/if}}
+  </div>
+  <div class="avatar__header">
+    <p class="avatar__name">Иван</p>
+    {{#if dateNumber}}
+      <p class="avatar__date">{{dateNumber}}</p>
+    {{/if}}
+    {{#if previewMessage}}
+      <p class="avatar__preview-message">{{previewMessage}}</p>
+    {{/if}}
+    {{#if startMessage}}
+      <p class="avatar__start-message">{{startMessage}}</p>
+    {{/if}}
+  </div>
+</article>

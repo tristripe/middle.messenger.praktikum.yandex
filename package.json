@@ -3,33 +3,41 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel ./src/pages/*.hbs -p 3000 --no-cache",
-    "build": "parcel build ./src/pages/*.hbs",
+    "start": "parcel src/index.html --no-source-maps -p 3000 --no-cache",
+    "build": "parcel build ./src/index.html",
     "scss-watch": "sass --no-source-map --watch ./src/scss/main.scss public/styles/main.css",
     "express": "node app.js",
-    "static": "npm-run-all --parallel node express scss-watch"
+    "static": "npm-run-all --parallel node express scss-watch",
+    "stylelint": "stylelint ./src/scss/**/*{.css,.scss}",
+    "stylelint:fix": "stylelint ./src/scss/**/*{.css,.scss} --fix"
+  },
+  "alias": {
+    "helpers": "./src/helpers"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "eslint": "^8.10.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "nodemon": "^2.0.15",
-    "npm-run-all": "^4.1.5",
-    "parcel": "^2.3.0",
-    "stylelint": "^14.5.3"
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "eslint": "8.10.0",
+    "eslint-config-airbnb": "19.0.4",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "typescript": "4.7.3"
   },
   "dependencies": {
-    "@parcel/config-default": "^2.3.1",
-    "@parcel/transformer-sass": "^2.3.1",
-    "express": "^4.17.2",
-    "express-compile-sass": "^4.0.0",
-    "hbs": "^4.2.0",
-    "node-sass": "^7.0.1",
-    "sass": "^1.49.7",
-    "stylelint-config-standard": "^25.0.0",
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@parcel/config-default": "2.3.2",
+    "@parcel/transformer-sass": "2.3.2",
+    "express": "4.17.3",
+    "express-compile-sass": "4.0.0",
+    "hbs": "4.2.0",
+    "node-sass": "7.0.1",
+    "nodemon": "2.0.15",
+    "npm-run-all": "4.1.5",
+    "parcel": "2.3.2",
+    "sass": "1.49.9",
+    "stylelint-config-standard": "25.0.0",
     "stylelint-scss": "^4.1.0"
   }
 }

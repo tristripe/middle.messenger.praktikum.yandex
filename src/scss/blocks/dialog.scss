@@ -1,0 +1,33 @@
+.dialog {
+  width: 100%;
+  padding: 15px 15px 20px 24px;
+  height: 550px;
+  position: relative;
+}
+
+.dialog__list {
+  width: 100%;
+}
+
+.dialog__item {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.dialog__text-content {
+  color: $white;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 400px;
+  padding-left: 40px;
+  margin-top: 4px;
+
+  p {
+    margin: 0;
+  }
+}
