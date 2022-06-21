@@ -4,7 +4,6 @@ import Avatar from "./components/Avatar";
 import Button from "./components/Button";
 import ErrorComponent from "./components/Error";
 import ControlledInput from "./components/ControlledInput";
-import Input from "./components/Input";
 import Friends from "./pages/friends";
 import Chat from "./pages/chat";
 import Settings from "./pages/settings";
@@ -13,13 +12,13 @@ import Register from "./pages/register";
 import Page404 from "./pages/404";
 import IndexPage from "./pages/indexPage";
 import Page500 from "./pages/500";
-import {TestLogin} from "./pages/testLogin/testlogin";
+import Input from "./components/Input";
 
 registerComponent(Avatar);
+registerComponent(Input);
 registerComponent(Button);
 registerComponent(ErrorComponent);
 registerComponent(ControlledInput);
-registerComponent(Input);
 
 document.addEventListener("DOMContentLoaded", () => {
   const path = document.location.pathname;
