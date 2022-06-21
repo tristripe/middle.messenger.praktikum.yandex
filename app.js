@@ -1,9 +1,6 @@
-
 const express = require('express');
 const hbs = require('hbs');
 const compileSass = require('express-compile-sass');
-const path = require('path');
-const sass = require('sass');
 const root = process.cwd();
 
 const app = express();

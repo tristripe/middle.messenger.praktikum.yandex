@@ -1,0 +1,36 @@
+.new-message {
+  width: 100%;
+  position: relative;
+}
+
+.new-message__plus {
+  position: absolute;
+  top: 17px;
+  left: 9px;
+  width: 14px;
+  height: 14px;
+  background-color: $white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+
+  img {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.new-message__value {
+  height: 32px;
+  border-radius: 4px;
+  background-color: $light-black;
+  border: none;
+  width: 100%;
+  color: $white;
+  padding-left: 40px;
+  transition: all 300ms ease-in-out;
+}
